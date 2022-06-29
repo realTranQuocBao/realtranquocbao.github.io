@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Giáo Phận Đà Lạt</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.2.0/dist/jquery.countdown.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    />
+    <style type="text/css">
+      body {
+        padding-top: 50px;
+      }
+      .starter-template {
+        padding: 40px 15px;
+        text-align: center;
+      }
+      .panel {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: cadetblue;
+        color: white;
+      }
+      #btn-reset {
+        margin-right: 10px;
+      }
+      #clock {
+        margin-bottom: 0;
+      }
+      #clock span:first-child {
+        margin-left: 0;
+      }
+      #clock span {
+        font-size: 50px;
+        font-weight: 700;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="starter-template">
+        <h1></h1>
+        <p class="lead">
+          Chào mừng đến với website thông tin chính thức của
+          <b>Giáo phận Đà Lạt</b><br />Website sẽ chính thức hoạt động vào ngày
+          29-05-2022
+        </p>
+        <div
+          class="panel panel-default"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Beautifull, insn't it?"
+        >
+          <div class="panel-body">
+            <div class="lead" id="clock"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $("#clock").countdown("2022/05/29", function (event) {
+        var $this = $(this).html(
+          event.strftime(
+            "" +
+              //+ '<span>%w</span> weeks '
+              "<span>%d</span> days " +
+              "<span>%H</span> hr " +
+              "<span>%M</span> min " +
+              "<span>%S</span> sec"
+          )
+        );
+      });
+    </script>
+  </body>
+</html>
