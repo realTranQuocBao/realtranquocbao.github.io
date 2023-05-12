@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: fit-content;
+}
+
+#timetable {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    gap: 0px;
+    border: 1px solid #000;
+}
+
+
+.cell {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.column-title {
+    background-color: #d2f880;
+    font-weight: bold;
+    text-align: center;
+}
+
+.row-title {
+    background-color: #fa6e4f;
+    font-weight: bold;
+    text-align: center;
+}
+
+.horizontal-line {
+    border-top: 1px solid red;
+}
+
+.vertical-line {
+    border-left: 1px solid blue;
+}
+
+
+
+
+/* ---------- */
+
+
+
+.content-wrapper {
+    padding: 5px;
+}
+
+.course-name {
+    font-size: 14px;
+    margin: 0;
+}
+
+.class-code,
+.teacher,
+.room-code {
+    font-size: 12px;
+    margin: 0;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.btn {
+    width: 100px;
+    margin: 10px;
+}
+
+th {
+    vertical-align: middle;
+    text-align: center;
+}
+
+#courseTable input,
+#courseTable select {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+#courseTable td {
+    vertical-align: middle;
+    text-align: center;
+
+    border: solid green 2px;
+    /* background: pink; */
+    padding: 2px;
+    height: 0px;
+}
+
+
+textarea {
+    resize: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#newtable {
+    width: 100%;
+    padding: 10px;
+}
+
+#timetable {
+    margin: 10px;
+}
+
+.iconbutton:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+.iconbutton {
+    color: red;
+}
+
+.groupButton button {
+    width: fit-content;
+    min-width: 150px;
+}
+
+.groupButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.collapse {
+    margin: 10px;
+}
